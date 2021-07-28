@@ -1,7 +1,7 @@
 # Multistage docker build, requires docker 17.05
 
 # builder stage
-FROM ubuntu:16.04 as builder
+FROM ubuntu:xenial-20210114 as builder
 
 RUN set -ex && \
     apt-get update && \
@@ -179,7 +179,7 @@ RUN set -ex && \
     fi
 
 # runtime stage
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210114
 
 RUN set -ex && \
     apt-get update && \
